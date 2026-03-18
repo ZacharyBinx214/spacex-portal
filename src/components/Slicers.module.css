@@ -1,0 +1,115 @@
+.panel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 14px 18px 10px;
+  margin-bottom: 14px;
+}
+
+.panelHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.panelTitle {
+  font-family: var(--font-condensed);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+
+.clearAll {
+  background: none;
+  border: none;
+  font-family: var(--font-condensed);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--accent2);
+  text-transform: uppercase;
+  padding: 0;
+  transition: color 0.2s;
+}
+.clearAll:hover { color: #fff; }
+
+.groups {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.group {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.groupLabel {
+  font-family: var(--font-condensed);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  white-space: nowrap;
+  padding-top: 5px;
+  min-width: 110px;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 10px;
+  border: 1px solid var(--border-bright);
+  background: transparent;
+  color: var(--text-dim);
+  font-family: var(--font-condensed);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: all 0.15s;
+  white-space: nowrap;
+  user-select: none;
+}
+
+.chip:hover {
+  border-color: var(--accent);
+  color: var(--text-bright);
+}
+
+.chipActive {
+  background: rgba(192,57,43,0.1);
+  border-color: var(--accent2);
+  color: var(--accent2);
+}
+
+.chipCount {
+  font-size: 10px;
+  opacity: 0.6;
+  font-weight: 500;
+}
+
+@media (max-width: 600px) {
+  .panel { padding: 12px 12px 8px; }
+  .group { flex-direction: column; gap: 4px; }
+  .groupLabel { min-width: unset; padding-top: 0; font-size: 10px; }
+  .chips {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding-bottom: 4px;
+  }
+  .chips::-webkit-scrollbar { display: none; }
+  .chip { flex-shrink: 0; }
+}

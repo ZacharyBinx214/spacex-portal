@@ -1,0 +1,73 @@
+.banner {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent2);
+  padding: 14px 18px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.icon {
+  font-size: 20px;
+  color: var(--accent2);
+  flex-shrink: 0;
+}
+
+.text { flex: 1; min-width: 200px; }
+
+.title {
+  font-family: var(--font-condensed);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--text-bright);
+  margin-bottom: 3px;
+}
+
+.sub {
+  font-size: 12px;
+  color: var(--text-dim);
+  line-height: 1.5;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.btnUpload {
+  background: var(--accent2);
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  font-family: var(--font-condensed);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.2s;
+  white-space: nowrap;
+}
+.btnUpload:hover { background: #e74c3c; }
+
+.btnRetry {
+  background: none;
+  border: 1px solid var(--border-bright);
+  color: var(--text-dim);
+  padding: 8px 14px;
+  font-family: var(--font-condensed);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+.btnRetry:hover { border-color: var(--accent); color: var(--accent); }
